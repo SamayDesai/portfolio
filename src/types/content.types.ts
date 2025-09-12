@@ -163,6 +163,23 @@ export interface About extends BasePageConfig {
       }>;
     }>;
   };
+  research: {
+    /** Whether to display research experience */
+    display: boolean;
+    /** Title for the research experience section */
+    title: string;
+    /** List of research experiences */
+    experiences: Array<{
+      /** Research institution or lab name */
+      company: string;
+      /** Timeframe of research */
+      timeframe: string;
+      /** Role or job title */
+      role: string;
+      /** Achievements in research */
+      achievements: React.ReactNode[];
+    }>;
+  };
   /** Studies/education section */
   studies: {
     /** Whether to display studies section */

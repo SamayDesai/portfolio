@@ -2,18 +2,18 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Samay",
+  lastName: "Desai",
+  name: `Samay Desai`,
+  role: "Software Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "samaydesai@gmail.com",
+  location: "America/New_York", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: [], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -24,17 +24,12 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/SamayDesai",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://linkedin.com/in/samaydesai-gt",
   },
   {
     name: "Email",
@@ -49,9 +44,9 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Hi 👋 I'm Samay</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Once UI</strong>{" "}
@@ -65,14 +60,12 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      CS at Georgia Tech
+      <br /> 
+      Prev at Meta
+      <br /> 
+      Aspiring software engineer
+      <br /> 
     </>
   ),
 };
@@ -90,7 +83,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -104,63 +97,93 @@ const about: About = {
       </>
     ),
   },
+  
   work: {
     display: true, // set to false to hide this section
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Meta",
+        timeframe: "May 2025 - August 2025",
+        role: "Software Engineer Intern",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <>Developed a robust LLM-based workflow using MetaChain to automate the detection and labeling of access risks across 10K+ data tables, surfacing 1K+ security issues and reducing company SEV exposure; collaborated with Data and Security teams.</>,
+          <>Engineered read-optimized data pipelines and workflows in Python and Hack, reducing data-collection latency by 95%+ and LLM runtime by 80%+ through batching, retries, and scheduling.</>,
+          <>Built an auto-remediation system that generates secure code diffs for flagged privacy issues using an agentic LLM with a specialized set of MCP tools and integrated a live dashboard visualizing real-time risk metrics, trends, and LLM-suggested fixes.</>,
+          <>Launched RAG-based internal LLM command, enabling real-time company-wide analysis on security risks and remediations, enabling privacy compliance.</>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "PTC Onshape",
+        timeframe: "June 2024 - August 2024",
+        role: "Software Development Intern",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>Designed and implemented microversioning system for Onshape’s cloud-based CAD software, enabling synchronization and storage of Bill of Materials (BOM) views in CAD documents across accounts, reaching over 3 million users.</>,
+          <>Developed search function for CAD design custom properties, allowing users from over 900 corporations to easily search through thousands of enterprise-wide properties by a uniquely-generated property ID.</>,
+          <>Redesigned BOM template system to allow users to save and assign company-wide default BOM views, saving significant generation time for complex designs, leveraging Angular, Spring, and MongoDB; over 1400 templates generated with 1000+ daily uses.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Joulea",
+        timeframe: "June 2023 - August 2023",
+        role: "Software Development Intern",
+        achievements: [
+          <>Developed CNN-based machine learning models to analyze thermal imaging data from aerial video and photo footage and identify and classify any structural and thermal anomalies with 96% accuracy.</>,
+          <>Utilized computer vision, lidar data, and GPS information to build out drone path planning algorithms, optimizing data collection processes and enabling simultaneous localization and mapping (SLAM) to simulate and recreate the 3D landscape around drones.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Warner Bros. Discovery",
+        timeframe: "June 2022 - August 2022",
+        role: "Software Development Intern",
+        achievements: [
+          <>Collaborated with software engineering and QA teams to develop and implement new React Native features for the TNT, TruTV, and TBS apps, improving streaming functionality and streamlining user experience for over 10,000,000 users.</>,
         ],
         images: [],
       },
     ],
   },
-  studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
-    institutions: [
+
+  research: {
+    display: true,
+    title: "Research Experience",
+    experiences: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        company: "Social Dynamics and Well-Being Lab",
+        
+        timeframe: "August 2024 - Present",
+        role: "Researcher",
+        achievements: [
+          <>Leverage multimodal language models (VLMs and LLMs) to create multimodal valence, mental health, and harmful content classifications of social media video data to determine the effect of social media on teen mental health.</>,
+          <>In collaboration with the University of Cambridge, Dr. Amy Orben, and Dr. Munmun De Choudhury.</>,
+        ],
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        company: "Neural Data Science Lab",
+        
+        timeframe: "June 2021 - April 2022",
+        role: "Researcher",
+        achievements: [
+          <>Conducted pioneering research using deep learning to study different brain structures and cell types and their susceptibility to neurodegenerative diseases like Alzheimer’s, winning the APA Award for Outstanding Research in Psychological Science.</>,
+          <>Worked in collaboration with the Allen Brain Institute on novel 3D brain imaging data sets, using CNN models to predict and classify signs of neurodegeneration with 98% accuracy.</>,
+        ],
+      },
+    ],
+  },
+  studies: {
+    display: true, // set to false to hide this section
+    title: "Education",
+    institutions: [
+      {
+        name: "Georgia Insitute of Technology, M.S.",
+        description: <>Computer Science</>,
+      },
+      {
+        name: "Georgia Insitute of Technology, B.S.",
+        description: <>Computer Science</>,
       },
     ],
   },
@@ -169,61 +192,55 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Languages",
+        description: <></>,
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Java" },
+          { name: "Python" },
+          { name: "C/C++" },
+          { name: "HTML/CSS" },
+          { name: "Dart" },
+          { name: "JavaScript" },
+          { name: "TypeScript" },
+          { name: "PHP" },
+          { name: "Hack" },
+          { name: "SQL" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        title: "Frameworks & Libraries",
+        description: <></>,
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Spring" },
+          { name: "Angular" },
+          { name: "Tensorflow" },
+          { name: "Pytorch" },
+          { name: "OpenCV" },
+          { name: "Scikit-learn" },
+          { name: "Node" },
+          { name: "Express" },
+          { name: "React" },
+          { name: "LangChain" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Tools",
+        description: <></>,
+        tags: [
+          { name: "Git" },
+          { name: "Gradle" },
+          { name: "MCP" },
+          { name: "Google Firebase" },
+          { name: "Android Studio" },
+          { name: "Flutter" },
+          { name: "Jira" },
+          { name: "RBCommons" },
+          { name: "MongoDB" },
         ],
-      },  
+        images: [],
+      },
     ],
   },
 };
@@ -239,7 +256,7 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
+  label: "Projects",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
@@ -248,9 +265,9 @@ const work: Work = {
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  label: "Resume",
+  title: `Resume – ${person.name}`,
+  description: `A resume by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [
@@ -259,41 +276,7 @@ const gallery: Gallery = {
       alt: "image",
       orientation: "horizontal",
     },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
+    
   ],
 };
 
