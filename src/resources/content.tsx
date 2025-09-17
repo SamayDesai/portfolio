@@ -44,7 +44,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Hi 👋 I'm Samay</>,
+  headline: <>Hi 👋 I'm Samay!</>,
   featured: {
     display: false,
     title: (
@@ -60,9 +60,10 @@ const home: Home = {
   },
   subline: (
     <>
-      BS/MS Computer Science @ Georgia Tech and Software Engineer
+      Software Engineer and  CS Student @ Georgia Tech
       <br />
-      Click below to learn more about me!
+      <br />
+      Learn more about what I'm up to!
     </>
   ),
 };
@@ -88,9 +89,13 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I'm currently a BS/MS Computer Science student and Stamps President's Scholar at Georgia Tech, specializing in Machine Learning
+        and Information Internetworks. I'm passionate about working on backend development, and I have experience ranging from machine learning and LLM work to full-stack development
+        at large tech companies like Meta and smaller startup companies alike. I enjoy building projects that allow me to explore new fields of technology and computer science
+        and I actively engage in research into the LLM space, especially how it can help us derive findings relating to human health.
+        <br />
+        <br />
+        Outside of computers, you can find me adventuring outdoors, playing pickleball, trying new food, or diving into new music!
       </>
     ),
   },
