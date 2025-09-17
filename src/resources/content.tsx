@@ -60,12 +60,9 @@ const home: Home = {
   },
   subline: (
     <>
-      CS at Georgia Tech
-      <br /> 
-      Prev at Meta
-      <br /> 
-      Aspiring software engineer
-      <br /> 
+      BS/MS Computer Science @ Georgia Tech and Software Engineer
+      <br />
+      Click below to learn more about me!
     </>
   ),
 };
@@ -272,11 +269,11 @@ const gallery: Gallery = {
   // These are placeholder images, replace with your own
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
+      src: "/images/gallery/Samay_Desai_Resume.png",
       alt: "image",
-      orientation: "horizontal",
+      orientation: "vertical",
     },
-    
+  
   ],
 };
 

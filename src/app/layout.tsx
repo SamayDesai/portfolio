@@ -83,7 +83,7 @@ export default async function RootLayout({
                   
                   // Apply saved theme
                   const savedTheme = localStorage.getItem('data-theme');
-                  const resolvedTheme = resolveTheme(savedTheme);
+              {/* Blog tab removed */}
                   root.setAttribute('data-theme', resolvedTheme);
                   
                   // Apply any saved style overrides

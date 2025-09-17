@@ -1,3 +1,4 @@
+// Blog Post component removed
 "use client";
 
 import { Card, Column, Media, Row, Avatar, Text } from "@once-ui-system/core";
@@ -59,5 +60,6 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
         </Column>
       </Row>
     </Card>
+  // Blog Post component removed
   );
 }

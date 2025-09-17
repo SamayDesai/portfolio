@@ -1,3 +1,4 @@
+// Blog ShareSection component removed
 "use client";
 
 import { Row, Text, Button, useToast } from "@once-ui-system/core";
@@ -123,5 +124,6 @@ export function ShareSection({ title, url }: ShareSectionProps) {
         )}
       </Row>
     </Row>
+  // Blog ShareSection component removed
   );
 }

@@ -1,3 +1,4 @@
+// Blog Posts component removed
 import { getPosts } from "@/utils/utils";
 import { Grid } from "@once-ui-system/core";
 import Post from "./Post";
@@ -42,5 +43,6 @@ export function Posts({
         </Grid>
       )}
     </>
+  // Blog Posts component removed
   );
 }
