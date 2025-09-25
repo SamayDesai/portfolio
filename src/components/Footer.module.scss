@@ -3,5 +3,9 @@
 @media (max-width: breakpoints.$s) {
     .mobile {
         text-align: center;
+        display: flex;
+        flex-direction: column-reverse; /* icons first, attribution below */
+        align-items: center;
+        gap: 12px;
     }
 }

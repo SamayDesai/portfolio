@@ -109,10 +109,7 @@ const about: About = {
         timeframe: "May 2025 - August 2025",
         role: "Software Engineer Intern",
         achievements: [
-          <>Developed a robust LLM-based workflow using MetaChain to automate the detection and labeling of access risks across 10K+ data tables, surfacing 1K+ security issues and reducing company SEV exposure; collaborated with Data and Security teams.</>,
-          <>Engineered read-optimized data pipelines and workflows in Python and Hack, reducing data-collection latency by 95%+ and LLM runtime by 80%+ through batching, retries, and scheduling.</>,
-          <>Built an auto-remediation system that generates secure code diffs for flagged privacy issues using an agentic LLM with a specialized set of MCP tools and integrated a live dashboard visualizing real-time risk metrics, trends, and LLM-suggested fixes.</>,
-          <>Launched RAG-based internal LLM command, enabling real-time company-wide analysis on security risks and remediations, enabling privacy compliance.</>,
+          <>Facebook Messenger Privacy/Security Team</>
         ],
         images: [],
       },
@@ -121,9 +118,7 @@ const about: About = {
         timeframe: "June 2024 - August 2024",
         role: "Software Development Intern",
         achievements: [
-          <>Designed and implemented microversioning system for Onshape’s cloud-based CAD software, enabling synchronization and storage of Bill of Materials (BOM) views in CAD documents across accounts, reaching over 3 million users.</>,
-          <>Developed search function for CAD design custom properties, allowing users from over 900 corporations to easily search through thousands of enterprise-wide properties by a uniquely-generated property ID.</>,
-          <>Redesigned BOM template system to allow users to save and assign company-wide default BOM views, saving significant generation time for complex designs, leveraging Angular, Spring, and MongoDB; over 1400 templates generated with 1000+ daily uses.</>,
+          <>Fullstack Web Development Team</>,
         ],
         images: [],
       },
@@ -132,8 +127,7 @@ const about: About = {
         timeframe: "June 2023 - August 2023",
         role: "Software Development Intern",
         achievements: [
-          <>Developed CNN-based machine learning models to analyze thermal imaging data from aerial video and photo footage and identify and classify any structural and thermal anomalies with 96% accuracy.</>,
-          <>Utilized computer vision, lidar data, and GPS information to build out drone path planning algorithms, optimizing data collection processes and enabling simultaneous localization and mapping (SLAM) to simulate and recreate the 3D landscape around drones.</>,
+          <>ML Engineering Team</>
         ],
         images: [],
       },
@@ -142,7 +136,7 @@ const about: About = {
         timeframe: "June 2022 - August 2022",
         role: "Software Development Intern",
         achievements: [
-          <>Collaborated with software engineering and QA teams to develop and implement new React Native features for the TNT, TruTV, and TBS apps, improving streaming functionality and streamlining user experience for over 10,000,000 users.</>,
+          <>TBS, TNT, TruTv Development and QA Team</>,
         ],
         images: [],
       },
@@ -169,8 +163,7 @@ const about: About = {
         timeframe: "June 2021 - April 2022",
         role: "Researcher",
         achievements: [
-          <>Conducted pioneering research using deep learning to study different brain structures and cell types and their susceptibility to neurodegenerative diseases like Alzheimer’s, winning the APA Award for Outstanding Research in Psychological Science.</>,
-          <>Worked in collaboration with the Allen Brain Institute on novel 3D brain imaging data sets, using CNN models to predict and classify signs of neurodegeneration with 98% accuracy.</>,
+          <>Using deep learning to study brain structures and cell types and their susceptibility to neurodegenerative diseases like Alzheimer’s</>,
         ],
       },
     ],

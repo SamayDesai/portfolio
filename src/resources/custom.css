@@ -51,4 +51,66 @@
   --scheme-neutral-600-30: rgba(137,152,159,0.3);
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
-}*/
+  }*/
+
+  /* Home page scoped subtle wave background
+     Apply this class to the home page container to show a faint decorative wave
+     image without affecting other pages. The overlay keeps text readable.
+  */
+  .home-wave-bg {
+    position: relative;
+    /* Keep the element itself transparent; we render the decorative image in ::before
+       so it doesn't create an opaque block behind content. */
+     z-index: 0;
+     background-color: transparent;
+    overflow: visible;
+   /* Center content horizontally; vertical centering is handled by layout
+     so the hero sits in the space between header and footer. */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+
+  /* Decorative faint image inserted behind the home content but inside the
+     home container. The image is low-opacity so it won't interfere with legibility.
+  */
+  .home-wave-bg::before {
+    content: '';
+    /* Make decorative image cover the full viewport */
+    position: fixed;
+    inset: 0; /* cover the viewport */
+    /* Use CSS variable so the image can be set from JS/TS (Next image import) */
+    background-image: var(--home-wave-image, none);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    /* Raised opacity so the image is visible but still subtle. */
+     opacity: 0.22; /* increased for visibility while debugging; lower to taste */
+    pointer-events: none;
+     z-index: -1;
+     /* remove blend mode for now so the image is plainly visible; switch back to
+       multiply/overlay later if you prefer a blended look */
+     mix-blend-mode: normal;
+    will-change: opacity, transform;
+    transform: translateZ(0);
+  }
+
+  /* Make sure page content sits above the decorative image */
+  .home-wave-bg > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Dark theme: keep the image equally subtle but allow a slightly darker look */
+  [data-theme='dark'] .home-wave-bg::before {
+    opacity: 0.12;
+    filter: brightness(0.85) contrast(0.95) saturate(0.9);
+  }
+
+  @media (max-width: 768px) {
+    .home-wave-bg::before {
+      background-position: center top;
+      background-size: 140%;
+    }
+  }

@@ -82,10 +82,10 @@ export default async function RootLayout({
                     return themeValue;
                   };
                   
-                  // Apply saved theme
-                  const savedTheme = localStorage.getItem('data-theme');
-              {/* Blog tab removed */}
-                  root.setAttribute('data-theme', resolvedTheme);
+          // Apply saved theme
+          const savedTheme = localStorage.getItem('data-theme');
+          const resolvedTheme = resolveTheme(savedTheme || defaultTheme);
+          root.setAttribute('data-theme', resolvedTheme);
                   
                   // Apply any saved style overrides
                   const styleKeys = Object.keys(config);

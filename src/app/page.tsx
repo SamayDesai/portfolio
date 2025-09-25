@@ -15,6 +15,7 @@ import { home, about, person, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
+import wave from "./wave.jpg";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -28,7 +29,18 @@ export async function generateMetadata() {
 
 export default function Home() {
   return (
-    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
+    <Column
+      className="home-wave-bg"
+      style={{
+        // set CSS variable so the ::before pseudo-element can use Next's served URL
+        // `url("<path>")` is required for background-image so we wrap it here
+        ["--home-wave-image" as any]: `url('${(wave as any).src || wave}')`,
+      }}
+      maxWidth="m"
+      gap="xl"
+      paddingY="12"
+      horizontal="center"
+    >
       <Schema
         as="webPage"
         baseURL={baseURL}
