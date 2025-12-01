@@ -1,6 +1,6 @@
 ---
 title: "Using ML for Stock and Commodity Price Prediction"
-summary: "An analysis and machine learning application of various supervised and unsupervised models for the clustering and classification of gold commodity prices."
+summary: "An analysis and machine learning application of various supervised and unsupervised models for the clustering and classification of gold commodity prices. *Project Link Requires GT Enterprise Github"
 images:
   - "/images/projects/project-01/ml1.png"
   - "/images/projects/project-01/ml2.png"
@@ -78,7 +78,7 @@ Supervised Learning Model 1 (Ridge Regression): For our supervised learning meth
 
 Supervised Learning Model 2 (Neural Network): For our second supervised learning model, we created a neural network to forecast daily Gold Close prices. We used this model to capture the complex relationships between the various macroeconomic indicators, including interest rates, unemployment and foreign exchange rates. Additionally, we also utilized technical signals like RSI and the gold prices moving averages. We used two hidden layers one with 64, the other with 32 neurons, ReLU activation functions, and dropout layers to prevent overfitting of the data. We also implemented an Adam optimizer and early stopping based on validation loss. This allowed us to avoid any unecessary training once the model plateaued. Overall, the neural network approach allowed us to capture subtle patterns in the financial time series data, improving prediction performance in certain scenarios.
 
-Supervised Learning Model 3 (Random Forest): For our third supervised learning model, we made daily Gold Close price predictions with Random Forest Regressor. The goal of this model was developing diverse predictions based on our features and data. The two processes used are bootstrapping which creates different subsets of training data and feature sampling where only a random set of features is used in each decision tree. Thus, we create diversity in our models that look to capture non-linearities. This ensemble learning strategy attempts to reduce overfitting while introducing noise and variation in financial data. To validate our results, we used Five-Fold Cross Validation approach. Using metrics such as Mean Squared Error and $R^2$ across folds, we can compare this model to the others. Finally, we visualize the results of the model in a plot against the original data. 
+Supervised Learning Model 3 (Random Forest): For our third supervised learning model, we made daily Gold Close price predictions with Random Forest Regressor. The goal of this model was developing diverse predictions based on our features and data. The two processes used are bootstrapping which creates different subsets of training data and feature sampling where only a random set of features is used in each decision tree. Thus, we create diversity in our models that look to capture non-linearities. This ensemble learning strategy attempts to reduce overfitting while introducing noise and variation in financial data. To validate our results, we used Five-Fold Cross Validation approach. Using metrics such as Mean Squared Error and R² across folds, we can compare this model to the others. Finally, we visualize the results of the model in a plot against the original data. 
 
 Unsupervised Learning Model 1 (KMeans):
 K-means allows us to cluster similar data points that represent a common set of market trends. This can help us identify patterns in the gold market without using predefined labels. We implemented K-means with 4 clusters to group data into 4 types of market trends: bullish gold markets, bearish gold markets, stable markets, and high volatility periods each representing some commonalities between the features. K-Means makes sense to find these patterns in gold commodity behavior and cluster our data into these distinct categories. K-means alllows us to also deal with the high-dimentional data and organize it into these meaningful clusters. In the next section, we will talk more about what our clusters signify and justify what specific sets of feature values correspond to each of these clusters.
@@ -111,22 +111,27 @@ market trends.
 
 After implementing the first models, we saw that there was high correlation between features such as the exchange rates and CPI in relation to GDP. This made us reduce the number of features so that one exchange rate and log GDP would become significant in our model. This also reduced our MSE in training data and testing data. We initially used a 80/20 split for training data and testing data but we wanted to make sure that time wasn't as impactful on the model. Thus, we implemented a K-Fold approach which tested our data into 5 testing sections and showed meaningful results.
 
+## Ridge Regression w/K-fold Cross Validation Plots and Metrics
 
 #### Model + Quantitative Metrics
+![Alt text](/images/projects/project-01/model1.png)
+![Alt text](/images/projects/project-01/model2.png)
+![Alt text](/images/projects/project-01/model3.png)
 
 #### Ridge Regression Model Evaluation + Discussion
-Though on first glance, the model may seem overfitted, as the predicted gold close line matches the true gold close to a striking degree, we believe that our model is not overfitted. Models that suffer from severe overfitting exhibit a very high Training $R^2$ and a much lower Testing $R^2$. This is becasue overfitted models generalize poorly to unseen data, resulting in a low R-squared on the test data. However, our model doesn't suffer from this same plight. With a Testing $R^2$ of 0.9998 and a Testing $R^2$ of 0.9983, the model performs very strongly on both the training set and testing set, showing that it generalizes nicely. Additionally, we can say the same about the Mean Squared Error Values. Both the training and testing set exhibit similar MSE values (~52), showing that we indeed are not overfitting. Thus, based on the strong metrics, we can be pretty confident in our model and its ability to predict gold prices.
+Though on first glance, the model may seem overfitted, as the predicted gold close line matches the true gold close to a striking degree, we believe that our model is not overfitted. Models that suffer from severe overfitting exhibit a very high Training R² and a much lower Testing R². This is becasue overfitted models generalize poorly to unseen data, resulting in a low R-squared on the test data. However, our model doesn't suffer from this same plight. With a Testing R² of 0.9998 and a Testing R² of 0.9983, the model performs very strongly on both the training set and testing set, showing that it generalizes nicely. Additionally, we can say the same about the Mean Squared Error Values. Both the training and testing set exhibit similar MSE values (~52), showing that we indeed are not overfitting. Thus, based on the strong metrics, we can be pretty confident in our model and its ability to predict gold prices.
 
 ## KMeans 
 
 #### Determining Number of Groups
-
+![Alt text](/images/projects/project-01/kmeans1.png)
 
 
 As shown by the plot above, once we reach 4 groups, there seems to be an elbow. The point suggests diminishing returns from adding more clusters, thus we chose to proceed with 4 clusters.
 
 #### KMeans Model
-
+![Alt text](/images/projects/project-01/ml1.png)
+![Alt text](/images/projects/project-01/kmeans3.png)
 
 ##### Group Classifications: 
 - Cluster 0 (Purple): Bullish Gold Market (Rising gold prices, high RSI, moderate economic uncertainty)
@@ -143,6 +148,8 @@ Using KMeans allows us to segement the many features of the data into 4 distinct
 With the neural network, he coped to capitalize on several of its advantages as a predictive model. We had previously experimented with Random Forest, but found that it could not account for prices outside of the range of training data. This was not the case with the neural netowrk as it seemed to be a more adaptable model, that could accurately predict market trends regardless of the range of training or testing data.  
 
 #### Model and Visualizations
+![Alt text](/images/projects/project-01/neurnet1.png)
+![Alt text](/images/projects/project-01/resplot.png)
 
 We acheived these metrics:
 ```
@@ -155,11 +162,13 @@ Test R²: 0.9888
 #### Neural Network Discussion
 We can see from our visualizations that the neural network performs well in terms of analyzing different macroeconomic indicators and predicting the complex relationships between the many variables that affect gold pricing. However, this model also has its limitations. We can see from the residual plot that the predictions generally stay within close range, but the model is susceptive to slight overpredictions or underpredictions particularly toward the more end of the time range.
 
-Based on our training and testing metrics, we can see that our training and test MSE are in a decent range, where our testing error is actually lower. Our $R^2$ values indicate that the model explains the vast majority of the variance in the data it is fed. Overall, our metrics show strong generalization and high accuracy, though there is still some room for improvement at extreme price points.
+Based on our training and testing metrics, we can see that our training and test MSE are in a decent range, where our testing error is actually lower. Our R² values indicate that the model explains the vast majority of the variance in the data it is fed. Overall, our metrics show strong generalization and high accuracy, though there is still some room for improvement at extreme price points.
 
 ## Random Forest
 
 #### Model + Quantitative Metrics
+![Alt text](/images/projects/project-01/randforest1.png)
+![Alt text](/images/projects/project-01/randforest2.png)
 
 We achieved these metrics:
 ```
@@ -173,7 +182,7 @@ Average R²: -0.30
 ```
 
 #### Random Forest Discussion
-Looking at the Random forest vizualization and results, we can see the results are pretty skewed. At first, for the beginning few years, the model does pretty well at predicting the prices before 2024 as the predictions follow the actual prices. However past 2024, the predictions are unable to forecast the upward trend that occurs with gold prices as it continues to predict prices that have a similar value as previous years. This is likely because since the training data, being split before these recent years, only contained values that capped around the 1800-1900 level. This made it so the decision trees were unable to grow past values that exceeded those levels, making the predictions unable to reach the level of 2000-3000+ which prices are currently at. This lead to most of the forecasts to still follow some of the similar spikes and falls that the actual prices did but were unable to reach the prices levels that the actual prices hit after 2024. As a result, the predictions outputted by the model became exceedingly poor, as shown by the negative $R^2$ values in folds 1, 2, and 5.
+Looking at the Random forest vizualization and results, we can see the results are pretty skewed. At first, for the beginning few years, the model does pretty well at predicting the prices before 2024 as the predictions follow the actual prices. However past 2024, the predictions are unable to forecast the upward trend that occurs with gold prices as it continues to predict prices that have a similar value as previous years. This is likely because since the training data, being split before these recent years, only contained values that capped around the 1800-1900 level. This made it so the decision trees were unable to grow past values that exceeded those levels, making the predictions unable to reach the level of 2000-3000+ which prices are currently at. This lead to most of the forecasts to still follow some of the similar spikes and falls that the actual prices did but were unable to reach the prices levels that the actual prices hit after 2024. As a result, the predictions outputted by the model became exceedingly poor, as shown by the negative R² values in folds 1, 2, and 5.
 
 ## Next Steps
 
