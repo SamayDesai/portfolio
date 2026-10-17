@@ -99,7 +99,7 @@ const about: About = {
       </>
     ),
   },
-  
+
   work: {
     display: true, // set to false to hide this section
     title: "Work Experience",
@@ -158,7 +158,7 @@ const about: About = {
     experiences: [
       {
         company: "Social Dynamics and Well-Being Lab",
-        
+
         timeframe: "August 2024 - Present",
         role: "Researcher",
         achievements: [
@@ -168,7 +168,7 @@ const about: About = {
       },
       {
         company: "Neural Data Science Lab",
-        
+
         timeframe: "June 2021 - April 2022",
         role: "Researcher",
         achievements: [
