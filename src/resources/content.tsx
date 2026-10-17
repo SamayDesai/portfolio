@@ -91,7 +91,7 @@ const about: About = {
       <>
         I'm currently a BS/MS Computer Science student and Stamps President's Scholar at Georgia Tech, specializing in Machine Learning
         and Information Internetworks. I'm passionate about working on backend development, and I have experience ranging from machine learning and LLM work to full-stack development
-        at large tech companies like Meta and smaller startup companies alike. I enjoy building projects that allow me to explore new fields of technology and computer science
+        at large tech companies like Google and Meta and smaller startup companies alike. I enjoy building projects that allow me to explore new fields of technology and computer science
         and I actively engage in research into the LLM space, especially how it can help us derive findings relating to human health.
         <br />
         <br />
@@ -104,6 +104,15 @@ const about: About = {
     display: true, // set to false to hide this section
     title: "Work Experience",
     experiences: [
+      {
+        company: "Google",
+        timeframe: "May 2026 - August 2026",
+        role: "Software Engineer Intern",
+        achievements: [
+          <>Play Promotions Platform Team</>
+        ],
+        images: [],
+      },
       {
         company: "Meta",
         timeframe: "May 2025 - August 2025",
@@ -190,16 +199,16 @@ const about: About = {
         title: "Languages",
         description: <></>,
         tags: [
-          { name: "Java" },
           { name: "Python" },
+          { name: "Java" },
           { name: "C/C++" },
-          { name: "HTML/CSS" },
-          { name: "Dart" },
-          { name: "JavaScript" },
           { name: "TypeScript" },
+          { name: "JavaScript" },
+          { name: "SQL" },
           { name: "PHP" },
           { name: "Hack" },
-          { name: "SQL" },
+          { name: "Dart" },
+          { name: "HTML/CSS" },
         ],
         images: [],
       },
@@ -207,16 +216,18 @@ const about: About = {
         title: "Frameworks & Libraries",
         description: <></>,
         tags: [
-          { name: "Spring" },
-          { name: "Angular" },
-          { name: "Tensorflow" },
-          { name: "Pytorch" },
-          { name: "OpenCV" },
-          { name: "Scikit-learn" },
-          { name: "Node" },
+          { name: "PyTorch" },
+          { name: "Hugging Face" },
+          { name: "LangChain" },
+          { name: "Spring Boot" },
+          { name: "Node.js" },
           { name: "Express" },
           { name: "React" },
-          { name: "LangChain" },
+          { name: "Angular" },
+          { name: "Flutter" },
+          { name: "OpenCV" },
+          { name: "Tensorflow" },
+          { name: "Scikit-learn" },
         ],
         images: [],
       },
@@ -225,14 +236,20 @@ const about: About = {
         description: <></>,
         tags: [
           { name: "Git" },
-          { name: "Gradle" },
+          { name: "Docker" },
+          { name: "gRPC" },
+          { name: "REST APIs" },
+          { name: "Google Cloud (GCP)" },
+          { name: "CUDA" },
+          { name: "Linux" },
           { name: "MCP" },
-          { name: "Google Firebase" },
-          { name: "Android Studio" },
-          { name: "Flutter" },
-          { name: "Jira" },
-          { name: "RBCommons" },
           { name: "MongoDB" },
+          { name: "Firebase" },
+          { name: "Gradle" },
+          { name: "Jira" },
+          { name: "LangGraph" },
+          { name: "Android Studio" },
+          { name: "RBCommons" },
         ],
         images: [],
       },
